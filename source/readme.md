@@ -13,8 +13,8 @@ This tells your operating system to listen on all public IPs.
 # notes on pairing raspbery pi to iphone
 ```
 sudo hciconfig -a
-sudo bluetoothctl
 [bluetooth] scan on
+sudo bluetoothctl
 # find your Iphone's BT address
 [bluetooth] scan off
 [bluetooth] pair XX:XX:XX:XX:XX
