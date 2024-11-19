@@ -1,0 +1,5 @@
+# m h  dom mon dow   command
+@reboot /home/pi/sensor/start.sh
+
+# start redis, used by ntopng
+@reboot /home/pi/bin/start-redis.sh

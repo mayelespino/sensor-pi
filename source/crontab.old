@@ -1,0 +1,19 @@
+# m h  dom mon dow   command
+#Ansible: run start.sh to start flask and nginx
+@reboot /home/pi/repo/sensor/start.sh
+#Ansible: run ambiant sensor and write to ramdisk
+*/15 * * * * /usr/bin/python /home/pi/repo/sensor/sensor-ambiant.py
+
+# Bluetooth
+*/5 * * * * /usr/bin/python /home/pi/repo/sensor/sensor-bluetooth-timestamp.py
+
+# History
+5 * * * * /usr/bin/python /home/pi/repo/sensor/sensor-history.py
+
+# speed test every 30
+*/20 * * * * /home/pi/repo/sensor/stest.sh
+01 * * * * /home/pi/repo/sensor/stest.sh
+0 0 * * * /bin/date > /mnt/ramdisk/speedtest.txt
+
+# start redis, used by ntopng
+@reboot /home/pi/bin/start-redis.sh
