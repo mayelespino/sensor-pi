@@ -1,0 +1,11 @@
+[Unit]
+Description=Sensor Flask App    
+
+[Service]
+ExecStart=/home/pi/sensor-pi/source/start.sh
+Restart=on-failure
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target
+
