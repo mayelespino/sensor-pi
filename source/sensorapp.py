@@ -65,7 +65,7 @@ def read_sensor():
     if aReceiveBuf[STATUS_REG] & 0x04 :
         results['brightness'] = "Onboard brightness sensor overrange!"
     elif aReceiveBuf[STATUS_REG] & 0x08 :
-        results['brightness'] = "Onboard brightness sensor failure!"
+        results['brightness'] = "Dark"
     else :
         results['brightness'] = "{} Lux".format(aReceiveBuf[LIGHT_REG_H] << 8 | aReceiveBuf[LIGHT_REG_L])
 

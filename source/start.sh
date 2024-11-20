@@ -1,3 +1,3 @@
-# export FLASK_APP=/home/pi/repo/sensor/sensorapp.py
-# nohup flask run --host=0.0.0.0  >/dev/null 2>&1 &
-nohup /usr/bin/python /home/pi/sensor/sensorapp.py  >/dev/null 2>&1 &
+#!/bin/bash
+
+/usr/bin/python /home/pi/sensor/sensorapp.py 
